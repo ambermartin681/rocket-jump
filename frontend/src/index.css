@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-stellar-dark text-white font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-stellar-purple to-pink-500;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-stellar-purple hover:bg-stellar-purple/90 text-white font-semibold rounded-xl 
+           transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg 
+           shadow-stellar-purple/20 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none 
+           focus:ring-2 focus:ring-stellar-purple/50 focus:border-stellar-purple/50 transition-all;
+  }
+}
